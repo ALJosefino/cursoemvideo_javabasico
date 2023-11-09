@@ -31,6 +31,27 @@ public class OperadoresUnarios {
                 + "declarada e atribuida 4 "
                 + "recebeu PRÉ incremento ++pera " + pera);
         
+        System.out.println("__________________________________________________");
+        System.out.println(" Pré e Pós decremento com operadores unários ");
+        System.out.println("__________________________________________________");
+        
+        int cebola = 6;
+        int cenoura = 8 - cebola--;
+        System.out.println("O conteúdo da variável cebola terminou em: " + cebola);
+        System.out.println("O conteúdo da variável cenoura terminou em: " + cenoura);
+        System.out.println("O conteúdo da váriável cebola que foi "
+                + "declarada e atribuida 6 "
+                + "recebeu pós decremento cebola " + cebola);
+        
+        int chuchu = 5;
+        int abobora = 5 - --chuchu;
+        System.out.println("O conteúdo da variável chuchu terminou em: " + chuchu);
+        System.out.println("O conteúdo da variável abobora terminou em: " + abobora);
+        System.out.println("O conteúdo da váriável chuchu que foi "
+                + "declarada e atribuida 5 "
+                + "recebeu PRÉ decremento cebola " + abobora);
+        
+        
         
     }
     
