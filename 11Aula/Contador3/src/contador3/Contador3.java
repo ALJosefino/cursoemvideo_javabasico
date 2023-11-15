@@ -37,15 +37,21 @@ public class Contador3 {
             
             int c = n;
             
-            int f = 1;
+            long f = 1;
             
             while (c >= 1) {
             
                 f *= c;
+                 
+                System.out.printf( "%d x ",c );
                 
                 c --;
                 
+                System.out.printf( "%d = %d ", c, f) ;
+                
             }
+           
+            System.out.printf(" = %d \n", f);
             
             System.out.printf("Fatorial do número %d é o número %d ", n, f);
                   
