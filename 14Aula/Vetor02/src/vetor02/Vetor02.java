@@ -14,15 +14,17 @@ public class Vetor02 {
 
     public static void main(String[] args) {
         
-        int [] q = { 9, 1, 3, 7, 2, 8, 6, 4, 0, 5}; 
+        int q [] = new int [10];
         
-        int a = q.length;
+        int [] k = { 9, 1, 3, 7, 2, 8, 6, 4, 0, 5};        
         
-        System.out.printf("Total de casas do vetor nome q é %d \n", a);
+        q = k;  
+                 
+        System.out.println("Total de casas do vetor nome q é " + q.length);
+                       
+        for (int c = 0; c < q.length; c++ ) {
         
-        for (int c=0; c <= a; c++ ) {
-        
-            System.out.printf("Na posição %d temos o conteúdo %d \n", c, q[c]);
+            System.out.println("Na posição " + c + " temos o conteúdo " + q[c]);
         
         }
         
