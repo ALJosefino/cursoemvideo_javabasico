@@ -4,6 +4,7 @@
  */
 package classes;
 
+import java.util.Arrays;
 import javax.swing.DefaultListModel;
 
 /**
@@ -23,7 +24,14 @@ public class TelaVetor extends javax.swing.JFrame {
      * Creates new form TelaVetor
      */
     public TelaVetor() {
+        
         initComponents();
+        
+        for (int c = 0; c < vetor.length; c ++ ) {
+        
+            lista.addElement(vetor[c]);
+        
+        }
     }
 
     /**
@@ -58,9 +66,19 @@ public class TelaVetor extends javax.swing.JFrame {
 
         btnRemove.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnRemove.setText("Remover");
+        btnRemove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoveActionPerformed(evt);
+            }
+        });
 
         btnOrdem.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnOrdem.setText("Ordenar");
+        btnOrdem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOrdemActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("vetor");
@@ -146,6 +164,34 @@ public class TelaVetor extends javax.swing.JFrame {
         lblSelecionado.setText("[" + selecionado + "]");
         
     }//GEN-LAST:event_lstVetorMouseClicked
+
+    private void btnRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveActionPerformed
+        
+        vetor [selecionado] = 0;
+        
+        lista.removeAllElements();
+        
+        for ( int c = 0; c < vetor.length; c ++ ) {
+        
+            lista.addElement(vetor[c]);
+            
+        }
+                
+    }//GEN-LAST:event_btnRemoveActionPerformed
+
+    private void btnOrdemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrdemActionPerformed
+
+        Arrays.sort(vetor);
+        
+        lista.removeAllElements();
+        
+        for (int c = 0; c < vetor.length; c ++) {
+        
+            lista.addElement(vetor[c]);
+            
+        }
+
+    }//GEN-LAST:event_btnOrdemActionPerformed
 
     /**
      * @param args the command line arguments
