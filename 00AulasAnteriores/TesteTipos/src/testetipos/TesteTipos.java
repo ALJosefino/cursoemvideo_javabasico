@@ -37,7 +37,7 @@ public class TesteTipos {
         System.out.println("_______________________________________________");
         
         System.out.println (cadeia + " agora esta armazenado como String");
-        
+        System.out.println ("__________________________________________");
         }
     
 }
